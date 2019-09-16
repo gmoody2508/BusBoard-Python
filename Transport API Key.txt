@@ -1,2 +1,1 @@
-App ID: 533c77cf
-Key: 4f3f6aa545a3229423bd279c97a639b0
+---
