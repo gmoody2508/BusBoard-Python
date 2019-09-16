@@ -57,7 +57,6 @@ def main(stop_code, AppID, Key,group_key,limit):
                 print(output_data)
 
 postcode="BA1 5BQ"
-postcode="BA1 1AN"
 group='no'
 limit='5'
 group_key='all'
@@ -74,7 +73,11 @@ AppID=AppID[1:-1]
 Key=KeyInfo[1]
 Key=Key[1:]
 
-stop_codes=BusStopFinder(postcode,AppID,Key,required_stops)
+try:
+    stop_codes=BusStopFinder(postcode,AppID,Key,required_stops)
+except TypeError:
+    print("Error! The provided postcode does not exist.")
+    sys.exit()
 
 for item in stop_codes:
     stop_code=item[0]
@@ -85,3 +88,4 @@ for item in stop_codes:
         main(stop_code,AppID,Key,group_key,limit)
     except KeyError:
         print("Error! Bus data is not available for stop: "+stop_name)
+        sys.exit()
