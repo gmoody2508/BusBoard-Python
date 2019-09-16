@@ -4,7 +4,24 @@ import sys
 
 stop_code='0180BAC30592'
 
-#data=requests.get('https://api.github.com/events')
+#class Bus:
+#    def __init__(self, atco,sms,request_time,name,stop_name,bearing,indicator):
+#        self.date = date
+#        self.from_account = acc_from
+#        self.to_account = acc_to
+#        self.narrative = narrative
+#        self.amount = amount
+#
+#    def __repr__(self):
+#        return f"""********************************************
+#        Date: {self.date}
+#        From: {self.from_account}
+#        To: {self.to_account}
+#        Narrative: {self.narrative}
+#        Amount: £{self.amount}"""
+
+#    def export(self):
+#        return [self.date, self.from_account, self.to_account, self.narrative, self.amount]
 
 KeyInfo_file=open("TransportAPIKey.txt",'r')
 KeyInfo=[]
@@ -28,12 +45,15 @@ def main(stop_code, AppID, Key):
     URL=URL+AppID
     URL=URL+"&app_key="
     URL=URL+Key
-    URL=URL+"&group=route&limit=5&nextbuses=yes"
-    print(URL)
+    URL=URL+"&group=no&limit=5&nextbuses=yes"
     bus_data=requests.get(URL)
-    print(bus_data)
     bus_data=bus_data.json()
-    print(bus_data)
+    output_data=[]
+    for key in bus_data:
+        if key == 'departures':
+            print(bus_data[key])
+
+
     sys.exit()
 
 main(stop_code,AppID,Key)
