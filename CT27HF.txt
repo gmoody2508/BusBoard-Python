@@ -1,0 +1,76 @@
+**************************************************
+St Michael's Road - NE-bound
+**************************************************
+
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 16:59
+        **************************************************
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 17:39
+        **************************************************
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 18:19
+        **************************************************
+
+        Line Number: 22A
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 18:43
+        **************************************************
+St Michael's Road - SW-bound
+**************************************************
+
+
+        Line Number: 21A
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 16:48
+        **************************************************
+
+        Line Number: 21A
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 17:28
+        **************************************************
+
+        Line Number: 21A
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 18:08
+        **************************************************
+Nursery Walk - NE-bound
+**************************************************
+
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 16:58
+        **************************************************
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 17:38
+        **************************************************
+
+        Line Number: 21
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 18:18
+        **************************************************
+
+        Line Number: 22A
+        To: Canterbury
+        Operated By: SCEK
+        Expected Departure: 18:42
+        **************************************************

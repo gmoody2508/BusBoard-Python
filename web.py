@@ -18,7 +18,9 @@ def busInfo():
     with open(infile, 'r') as bus_times:
         contents = bus_times.readlines()
     bus_times.close()
+    indices = [i for i, item in enumerate(contents) if '*' in item]
     print(contents)
+    print(indices)
     return render_template('info.html', postcode=postcode, data=contents)
 
 if __name__ == "__main__": app.run()

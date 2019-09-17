@@ -20,7 +20,8 @@ class Bus_data:
         Line Number: {self.line_name}
         To: {self.direction}
         Operated By: {self.operator}
-        Expected Departure: {self.departure_time}\n"""
+        Expected Departure: {self.departure_time}
+        **************************************************"""
 
 def BusStopFinder(postcode,AppID,Key,required_stops):
     URL = "https://api.postcodes.io/postcodes?q=" + postcode
@@ -63,16 +64,17 @@ def main(stop_code, AppID, Key,group_key,limit):
         else:
             print(bus_entry)
 
-if args.postcode == None:
-    postcode=input("Please enter a valid UK postcode")
-else:
+print(args.postcode)
+if args.postcode:
     postcode=args.postcode
     write=True
+else:
+    postcode=input("Please enter a valid UK postcode")
 
 group='no'
 limit='5'
 group_key='all'
-required_stops=2
+required_stops=3
 if write == True:
     outfile=postcode+".txt"
     with open(outfile,'w') as out:
@@ -96,14 +98,19 @@ except TypeError:
     print("Error! The provided postcode does not exist.")
     sys.exit()
 
+if write == True:
+    outfile=postcode+".txt"
+    with open(outfile,'w') as out:
+        out.write("**************************************************")
+    out.close()
+
+
 for item in stop_codes:
     stop_code=item[0]
     stop_name=item[1]
     if write == True:
         with open(outfile,'a') as out:
-            out.write("\n")
-            out.write("**************************************************\n")
-            out.write(stop_name+"\n")
+            out.write("\n"+stop_name+"\n")
             out.write("**************************************************\n")
         out.close()
     else:

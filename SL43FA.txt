@@ -1,0 +1,100 @@
+**************************************************
+King Edward VII Hospital - S-bound
+**************************************************
+
+
+        Line Number: 600
+        To: Legoland, Windsor
+        Operated By: CTNY
+        Expected Departure: 16:55
+        **************************************************
+
+        Line Number: 600
+        To: Legoland, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:15
+        **************************************************
+
+        Line Number: 16A
+        To: Maidenhead Town Centre, Maidenhead
+        Operated By: CTNY
+        Expected Departure: 17:31
+        **************************************************
+
+        Line Number: 703
+        To: Bracknell
+        Operated By: GLRB
+        Expected Departure: 17:34
+        **************************************************
+
+        Line Number: 702
+        To: Legoland, Windsor
+        Operated By: GLRB
+        Expected Departure: 17:44
+        **************************************************
+King Edward VII Hospital - N-bound
+**************************************************
+
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 16:59
+        **************************************************
+
+        Line Number: 702
+        To: Victoria, London
+        Operated By: GLRB
+        Expected Departure: 17:10
+        **************************************************
+
+        Line Number: 16
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:14
+        **************************************************
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:24
+        **************************************************
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:39
+        **************************************************
+Trevelyan School - E-bound
+**************************************************
+
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 16:58
+        **************************************************
+
+        Line Number: 702
+        To: Victoria, London
+        Operated By: GLRB
+        Expected Departure: 17:09
+        **************************************************
+
+        Line Number: 16
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:12
+        **************************************************
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:23
+        **************************************************
+
+        Line Number: 600
+        To: Windsor Town Centre, Windsor
+        Operated By: CTNY
+        Expected Departure: 17:38
+        **************************************************
