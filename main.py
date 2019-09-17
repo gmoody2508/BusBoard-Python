@@ -1,6 +1,7 @@
 import requests
 import json
 import sys
+import os
 
 class Bus_data:
     def __init__(self, line_name, direction, operator, departure_time):
@@ -10,21 +11,21 @@ class Bus_data:
         self.departure_time = departure_time
 
     def __repr__(self):
-        return f"""********************************************
+        return f"""\n
         Line Number: {self.line_name}
         To: {self.direction}
         Operated By: {self.operator}
-        Expected Departure: {self.departure_time}"""
+        Expected Departure: {self.departure_time}\n"""
 
 def BusStopFinder(postcode,AppID,Key,required_stops):
     URL = "https://api.postcodes.io/postcodes?q=" + postcode
     postcode_data = requests.get(URL)
     postcode_data = postcode_data.json()
-    postcode_data = postcode_data['result']
-    postcode_data=postcode_data[0]
+    postcode_data = postcode_data['result'][0]
     longitude=str(postcode_data['longitude'])
     latitude=str(postcode_data['latitude'])
-    URL = "https://transportapi.com/v3/uk/places.json?app_id="+AppID+"&app_key="+Key+"&lat="+latitude+"&lon="+longitude+"&type=bus_stop"
+    URL = "https://transportapi.com/v3/uk/places.json?app_id="+AppID+"&app_key="+Key+"&lat="+latitude+"&lon="+longitude
+    URL = URL + "&type=bus_stop"
     bus_stops=requests.get(URL)
     bus_stops=bus_stops.json()
     bus_stops=bus_stops['member']
@@ -44,23 +45,31 @@ def main(stop_code, AppID, Key,group_key,limit):
     URL=URL+"&group="+group+"&limit="+limit+"&nextbuses=no"
     bus_data=requests.get(URL)
     bus_data=bus_data.json()
-    for key in bus_data:
-        if key == 'departures':
-            bus_data=bus_data[key]
-            bus_data=bus_data[group_key]
-            for bus in bus_data:
-                line_name=bus['line_name']
-                direction = bus['direction']
-                operator = bus['operator']
-                departure_time = bus['best_departure_estimate']
-                output_data=Bus_data(line_name,direction,operator,departure_time)
-                print(output_data)
+    bus_data=bus_data['departures'][group_key]
+    for bus in bus_data:
+        line_name=bus['line_name']
+        direction = bus['direction']
+        operator = bus['operator']
+        departure_time = bus['best_departure_estimate']
+        bus_entry=Bus_data(line_name,direction,operator,departure_time)
+        if web:
+            with open(outfile,'a') as out:
+                out.write(str(bus_entry))
+        else:
+            print(bus_entry)
 
-postcode="BA1 5BQ"
+
+postcode=input("Please enter UK postcode")
 group='no'
 limit='5'
 group_key='all'
 required_stops=2
+web=input("Enter 'y' to generate output as website, default is to print to terminal")
+if web:
+    outfile=postcode+".txt"
+    with open(outfile,'w') as out:
+        out.write("Bus information for the nearest "+str(required_stops)+" bus stops to "+postcode+"\n\n")
+    out.close()
 
 KeyInfo_file=open("TransportAPIKey.txt",'r')
 KeyInfo=[]
@@ -79,13 +88,23 @@ except TypeError:
     print("Error! The provided postcode does not exist.")
     sys.exit()
 
+web_input=[]
 for item in stop_codes:
     stop_code=item[0]
     stop_name=item[1]
+    if web:
+        with open(outfile,'a') as out:
+            out.write("\n")
+            out.write("**************************************************\n")
+            out.write(stop_name+"\n")
+            out.write("**************************************************\n")
+        out.close()
     print("\n")
     print("Data for bus stop "+stop_name+": (ATCO code "+stop_code+")")
     try:
         main(stop_code,AppID,Key,group_key,limit)
     except KeyError:
         print("Error! Bus data is not available for stop: "+stop_name)
-        sys.exit()
+if web:
+    postcode=postcode.replace(" ","")
+    os.system("python web.py -p "+str(postcode))
