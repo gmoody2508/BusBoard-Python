@@ -1,4 +1,4 @@
-BUS INFORMATION FOR THE NEAREST 2 BUS STOPS TO BA11HX
+Bus information for the nearest 2 bus stops to BA1 1HX
 
 
 **************************************************
@@ -6,44 +6,34 @@ James Street West (Ge) - NW-bound
 **************************************************
 
 
-        Line Number: 5
-        To: Bath City Centre, Bath
+        Line Number: U5
+        To: Bath Spa University, Newton St Loe
         Operated By: FB
-        Expected Departure: 12:03
-
-
-
-
-        Line Number: 1
-        To: Bath City Centre, Bath
-        Operated By: FB
-        Expected Departure: 12:03
-
-
-
-
-        Line Number: 1
-        To: Bath City Centre, Bath
-        Operated By: FB
-        Expected Departure: 12:13
-
-
+        Expected Departure: 11:29
 
 
         Line Number: 5
         To: Bath City Centre, Bath
         Operated By: FB
-        Expected Departure: 12:13
-
-
+        Expected Departure: 11:33
 
 
         Line Number: 1
         To: Bath City Centre, Bath
         Operated By: FB
-        Expected Departure: 12:23
+        Expected Departure: 11:33
 
 
+        Line Number: 1
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 11:43
+
+
+        Line Number: 5
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 11:43
 
 **************************************************
 James Street West (Gc) - E-bound
@@ -53,30 +43,28 @@ James Street West (Gc) - E-bound
         Line Number: X39
         To: Bath City Centre, Bath
         Operated By: FB
-        Expected Departure: 12:00
+        Expected Departure: 11:30
 
 
-
-
-        Line Number: 19A
-        To: Bath City Centre, Bath
+        Line Number: 3A
+        To: Batheaston
         Operated By: FB
-        Expected Departure: 12:04
-
-
-
-
-        Line Number: 4
-        To: Odd Down, Bath
-        Operated By: FB
-        Expected Departure: 12:05
-
-
+        Expected Departure: 11:35
 
 
         Line Number: 21
         To: Bath City Centre, Bath
         Operated By: FB
-        Expected Departure: 12:08
+        Expected Departure: 11:38
 
 
+        Line Number: A4
+        To: Bath City Centre, Bath
+        Operated By: BB
+        Expected Departure: 11:40
+
+
+        Line Number: 4
+        To: Odd Down, Bath
+        Operated By: FB
+        Expected Departure: 11:45

@@ -5,6 +5,9 @@
     <h2>Bus Information</h2>
     <div>
         <p>You entered postcode <span>{{ postcode }}</span></p>
+        {% for line in contents %}
+            <div>{{ line }}</div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

@@ -68,7 +68,7 @@ web=input("Enter 'y' to generate output as website, default is to print to termi
 if web:
     outfile=postcode+".txt"
     with open(outfile,'w') as out:
-        out.write("Bus information for the nearest "+str(required_stops)+" bus stops to "+postcode+"\n\n")
+        out.write("BUS INFORMATION FOR THE NEAREST "+str(required_stops)+" BUS STOPS TO "+postcode+"\n\n")
     out.close()
 
 KeyInfo_file=open("TransportAPIKey.txt",'r')
