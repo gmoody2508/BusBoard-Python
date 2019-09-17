@@ -1,7 +1,12 @@
 import requests
 import json
 import sys
-import os
+import argparse
+
+parser = argparse.ArgumentParser(description='Script to generate website based on bus data')
+parser.add_argument('-p','--postcode', help='Valid UK postcode', required=False)
+args = parser.parse_args()
+write=False
 
 class Bus_data:
     def __init__(self, line_name, direction, operator, departure_time):
@@ -52,20 +57,23 @@ def main(stop_code, AppID, Key,group_key,limit):
         operator = bus['operator']
         departure_time = bus['best_departure_estimate']
         bus_entry=Bus_data(line_name,direction,operator,departure_time)
-        if web:
+        if write == True:
             with open(outfile,'a') as out:
                 out.write(str(bus_entry))
         else:
             print(bus_entry)
 
+if args.postcode == None:
+    postcode=input("Please enter a valid UK postcode")
+else:
+    postcode=args.postcode
+    write=True
 
-postcode=input("Please enter UK postcode")
 group='no'
 limit='5'
 group_key='all'
 required_stops=2
-web=input("Enter 'y' to generate output as website, default is to print to terminal")
-if web:
+if write == True:
     outfile=postcode+".txt"
     with open(outfile,'w') as out:
         out.write("BUS INFORMATION FOR THE NEAREST "+str(required_stops)+" BUS STOPS TO "+postcode+"\n\n")
@@ -88,23 +96,20 @@ except TypeError:
     print("Error! The provided postcode does not exist.")
     sys.exit()
 
-web_input=[]
 for item in stop_codes:
     stop_code=item[0]
     stop_name=item[1]
-    if web:
+    if write == True:
         with open(outfile,'a') as out:
             out.write("\n")
             out.write("**************************************************\n")
             out.write(stop_name+"\n")
             out.write("**************************************************\n")
         out.close()
-    print("\n")
-    print("Data for bus stop "+stop_name+": (ATCO code "+stop_code+")")
+    else:
+        print("\n")
+        print("Data for bus stop "+stop_name+": (ATCO code "+stop_code+")")
     try:
         main(stop_code,AppID,Key,group_key,limit)
     except KeyError:
         print("Error! Bus data is not available for stop: "+stop_name)
-if web:
-    postcode=postcode.replace(" ","")
-    os.system("python web.py -p "+str(postcode))

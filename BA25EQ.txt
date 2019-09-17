@@ -1,0 +1,64 @@
+BUS INFORMATION FOR THE NEAREST 2 BUS STOPS TO BA25EQ
+
+
+**************************************************
+Hadley Arms - S-bound
+**************************************************
+
+
+        Line Number: 2
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 14:54
+
+
+        Line Number: 2
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 15:14
+
+
+        Line Number: 2
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 15:35
+
+
+        Line Number: 2
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 16:00
+
+
+        Line Number: 2
+        To: Bath City Centre, Bath
+        Operated By: FB
+        Expected Departure: 16:20
+
+**************************************************
+Hadley Arms - W-bound
+**************************************************
+
+
+        Line Number: 228
+        To: Bath City Centre, Bath
+        Operated By: FAR
+        Expected Departure: 15:28
+
+
+        Line Number: R2
+        To: Southdown, Bath
+        Operated By: FB
+        Expected Departure: 15:32
+
+
+        Line Number: U2
+        To: University of Bath, Bath
+        Operated By: FB
+        Expected Departure: 15:37
+
+
+        Line Number: U2
+        To: University of Bath, Bath
+        Operated By: FB
+        Expected Departure: 16:37
